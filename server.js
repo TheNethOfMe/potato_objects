@@ -14,7 +14,7 @@ client.on('error', error => {
 });
 
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static('./public'));
 
 // REVIEW: These are routes for requesting HTML resources.
